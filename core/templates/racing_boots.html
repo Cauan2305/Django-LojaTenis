@@ -40,7 +40,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-3">
-					<div class="logo"><a href="#"><img src="{% static 'images/logo.png' %}"></a></div>
+					<div class="logo"><a href="{% url 'index' %}"><img src="{% static 'images/logo.png' %}"></a></div>
 				</div>
 				<div class="col-sm-9">
 					<nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -54,8 +54,8 @@
 							<a class="nav-item nav-link" href="{% url 'bota' %}">Shoes</a>
 							<a class="nav-item nav-link" href="{% url 'tenis' %}">Racing Boots</a>
 							<a class="nav-item nav-link" href="{% url 'contato' %}">Contact</a>
-							<a class="nav-item nav-link last" href="#"><img src="{% static 'images/search_icon.png' %}"></a>
-							<a class="nav-item nav-link last" href="{% url 'contato' %}"><img src="{% static 'images/shop_icon.png' %}"></a>
+							<!-- <a class="nav-item nav-link last" href="#"><img src="{% static 'images/search_icon.png' %}"></a> -->
+							<a class="nav-item nav-link last" href="{% url 'tenis' %}"><img src="{% static 'images/shop_icon.png' %}"></a>
 						 </div>
                     </div>
                     </nav>
@@ -83,7 +83,7 @@
     				<div class="col-md-4">
     					<div class="sale_text"><strong>Sale <br><span style="color: #0a0506;">JOGING</span> <br>SHOES</strong></div>
     					<div class="number_text"><strong>$ <span style="color: #0a0506">100</span></strong></div>
-    					<button class="seemore">See More</button>
+    					<button class="seemore"><a href="{% url 'tenis' %}">See More</a></button>
     				</div>
     			</div>
     		</div>
@@ -97,7 +97,7 @@
     		<div class="mail_section">
     			<div class="row">
     				<div class="col-sm-6 col-lg-2">
-    					<div><a href="#"><img src="{% static 'images/footer-logo.png' %}"></a></div>
+    					<div><a href="{% url 'index' %}"><img src="{% static 'images/footer-logo.png' %}"></a></div>
     				</div>
     				<div class="col-sm-6 col-lg-2">
     					<div class="footer-logo"><img src="{% static 'images/phone-icon.png' %}"><span class="map_text">(71) 1234567890</span></div>
@@ -127,7 +127,7 @@
     		        	<h2 class="shop_text">Address </h2>
     		        	<div class="image-icon"><img src="{% static 'images/map-icon.png' %}"><span class="pet_text">No 40 Baria Sreet 15/2 NewYork City, NY, United States.</span></div>
     		        </div>
-    		        <div class="col-sm-4 col-md-6 col-lg-3">
+    		        <!-- <div class="col-sm-4 col-md-6 col-lg-3">
     				    <h2 class="shop_text">Our Company </h2>
     				    <div class="delivery_text">
     				    	<ul>
@@ -138,33 +138,33 @@
     				    		<li>Contact us</li>
     				    	</ul>
     				    </div>
-    		        </div>
+    		        </div> -->
     			<div class="col-sm-6 col-lg-3">
-    				<h2 class="adderess_text">Products</h2>
+    				<!-- <h2 class="adderess_text">Products</h2> -->
     				<div class="delivery_text">
     				    	<ul>
-    				    		<li>Prices drop</li>
-    				    		<li>New products</li>
-    				    		<li>Best sales</li>
-    				    		<li>Contact us</li>
-    				    		<li>Sitemap</li>
+    				    		<!-- <li>Prices drop</li> -->
+    				    		<!-- <li>New products</li> -->
+    				    		<!-- <li>Best sales</li> -->
+    				    		<a href="{% url 'contato' %}"><li>Contact us</li></a>
+    				    		<!-- <li>Sitemap</li> -->
     				    	</ul>
     				    </div>
     			</div>
-    			<div class="col-sm-6 col-lg-2">
+    			<!-- <div class="col-sm-6 col-lg-2">
     				<h2 class="adderess_text">Newsletter</h2>
     				<div class="form-group">
                         <input type="text" class="enter_email" placeholder="Enter Your email" name="Name">
                     </div>
                     <button class="subscribr_bt">Subscribe</button>
-    			</div>
+    			</div> -->
     			</div>
     	        </div> 
 	        </div>
     	</div>
     </div>
 	<!-- section footer end -->
-	<div class="copyright">2019 All Rights Reserved. <a href="https://html.design">Free html  Templates</a></div>
+	<!-- <div class="copyright">2019 All Rights Reserved. <a href="https://html.design">Free html  Templates</a></div> -->
 
 
       <!-- Javascript files-->
