@@ -6,7 +6,10 @@ class  IndexView (TemplateView):
 
     def get_context_data(self, *args,**kwargs) :
         context=super(IndexView,self).get_context_data(**kwargs)
-        context['Produto']=ProdutosIndexPrimeiraColuna.objects.all()
+        context={
+            'Produto':ProdutosIndexPrimeiraColuna.objects.all(),
+            'Colecao':NovaColecaoIndex.objects.all() ,
+        }
         return context
 
 # class IndexView2(IndexView):

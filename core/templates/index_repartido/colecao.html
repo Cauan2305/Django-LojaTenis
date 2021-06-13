@@ -12,30 +12,32 @@
     <!-- new collection section start -->
     <div class="layout_padding collection_section">
     	<div class="container">
-        
-    	    <h1 class="new_text"><strong>oal</strong></h1>
-    	    <p class="consectetur_text">ljsdalkjalsljask</p>
+        {% for c in Colecao %}
+    	    <!-- <h1 class="new_text"><strong>{{c.texto_colecao}}</strong></h1> -->
+    	    <!-- <p class="consectetur_text">ljsdalkjalsljask</p> -->
     	    <div class="collection_section_2">
     	    	<div class="row">
     	    		<div class="col-md-6">
     	    			<div class="about-img">
     	    				<button class="new_bt">New</button>
-    	    				<div class="shoes-img"><img src="{% static 'images/shoes-img1.png' %}"></div>
-    	    				<p class="sport_text">Men Sports</p>
+							<!-- {% static 'images/shoes-img1.png' %} -->
+    	    				<div class="shoes-img"><img src="{{c.foto_index.thumb.url}}"></div>
+    	    				<p class="sport_text">{{c.titulo}}</p>
     	    				<div class="dolar_text">$<strong style="color: black;">90</strong> </div>
     	    			</div>
     	    			<button class="seemore_bt"><a href="{% url 'tenis' %}">See More</a></button>
     	    		</div>
     	    		<div class="col-md-6">
     	    			<div class="about-img2">
-    	    				<div class="shoes-img2"><img src="{% static 'images/shoes-img2.png' %}"></div>
-    	    				<p class="sport_text">Men Sports</p>
-    	    				<div class="dolar_text">$<strong style="color: #f12a47;">90</strong> </div>
+    	    				<div class="shoes-img2"><img src="{{c.foto_index2.thumb.url}}"></div>
+    	    				<p class="sport_text">{{c.titulo2}}</p>
+    	    				<div class="dolar_text">$<strong style="color: black;">{{c.preco2}}</strong> </div>
     	    			</div>
     	    		</div>
     	    	</div>
 			
     	    </div>
+		{% endfor %}
     	</div>
     </div>
     {% endblock %}

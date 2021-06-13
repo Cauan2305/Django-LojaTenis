@@ -8,10 +8,14 @@ def get_file_path(__instance,filename):
     return filename
 
 class NovaColecaoIndex(models.Model):
-    texto_colecao=models.TextField('Texto',max_length=1000,editable=True)
+    # texto_colecao=models.TextField('Texto',max_length=1000,editable=True)
     foto_index=StdImageField('imagem',upload_to=get_file_path,variations={'thumb':{'width' : 366,'height':236 ,'crop':True}})
     preco=models.DecimalField('Preco',decimal_places=2,max_digits=109309130190)
     titulo=models.CharField('Titulo',max_length=1000)
+    titulo2=models.CharField('Titulo 2',max_length=1000)
+    preco2=models.DecimalField('Preco 2',decimal_places=2,max_digits=109309130190)
+    foto_index2=StdImageField('imagem 2',upload_to=get_file_path,variations={'thumb':{'width' : 366,'height':236 ,'crop':True}})
+
     
 
 
