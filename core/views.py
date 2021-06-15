@@ -9,6 +9,7 @@ class  IndexView (TemplateView):
         context={
             'Produto':ProdutosIndexPrimeiraColuna.objects.all(),
             'Colecao':NovaColecaoIndex.objects.all() ,
+            'Botas': BotasIndex.objects.all(),
         }
         return context
 
